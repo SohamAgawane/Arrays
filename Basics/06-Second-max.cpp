@@ -2,7 +2,7 @@
 using namespace std;
 
 int main() {
-    int arr[5] = {4, 6, 11, 2, 8};
+    int arr[5] = {5, 2, 11, 8, 6};
 
     int ans = INT_MIN;
     for(int i=0; i<=5; i++){
