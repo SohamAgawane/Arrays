@@ -1,29 +1,27 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-int print2largest(vector<int> &arr) {
+int main() {
+    int arr[5] = {4, 6, 11, 2, 8};
 
-    //Largest element :
-    int largest = INT_MIN;
-    for(int i=0; i<arr.size(); i++){
-        if(arr[i] > largest){
-            largest = arr[i];
+    int ans = INT_MIN;
+    for(int i=0; i<=5; i++){
+        if(arr[i] > ans){
+            ans = arr[i];
         }
     }
-    
-    // Second Largest :
-    int second = -1;
-    
-    for(int i=0; i<arr.size(); i++){
-        if(arr[i] != largest){
-            second = max(second, arr[i]);
+    cout << "Largest element = " << ans << endl;
+
+    int secondLargest = -1;
+    for(int i=0; i<5; i++){
+        if(arr[i] != ans){
+            secondLargest = max(arr[i], secondLargest);
         }
     }
-    
-    //  No second largest exist
-    if(second == INT_MIN){
-        return -1;
+    cout << "Second Largest = " << secondLargest;
+
+    // If second largest does not exist -
+    if(secondLargest == INT_MIN){
+        cout << "Second Largest does not exist";
     }
-    
-    return second;
 }
