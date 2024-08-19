@@ -20,8 +20,4 @@ int main() {
     }
     cout << "Second Largest = " << secondLargest;
 
-    // If second largest does not exist -
-    if(secondLargest == INT_MIN){
-        cout << "Second Largest does not exist";
-    }
 }
